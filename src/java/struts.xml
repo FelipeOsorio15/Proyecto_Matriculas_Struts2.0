@@ -1,0 +1,96 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default,json-default" namespace="/">
+        <action name="LoginUsuarioXML" class="com.edu.apliweb.action.LoginUsuarioAction">
+          <!-- se ejectuta por defecto =SUCCESS la pagina jsp-->
+            <result name="success">/opcionesAdministrador.jsp</result>
+            <result name="input">/login.jsp</result> 
+            <result name="error">/login.jsp</result>
+        </action>
+        
+        <action name="CrearUsuarioXML" class="com.edu.apliweb.action.CrearUsuarioAction">
+               <result name="success">/crearUsuario.jsp</result>
+         <!--   <result name="input">/login.jsp</result> -->
+            <result name="error">/login.jsp</result>      
+        </action>
+        
+        <action name="CrearProyectoXML" class="com.edu.apliweb.action.CrearProyectoAction">
+               <result name="success">/crearProyecto.jsp</result>
+      <!--      <result name="input">/login.jsp</result> -->
+            <result name="error">/login.jsp</result>      
+        </action>
+        <action name="CrearActividadXML" class="com.edu.apliweb.action.CrearActividadAction">
+               <result name="success">/crearActividad.jsp</result>
+      <!--      <result name="input">/login.jsp</result> -->
+            <result name="error">/crearProyecto.jsp.jsp</result>      
+        </action>
+          <action name="IngresoUsuarioXML" class="com.edu.apliweb.action.IngresoUsuarioAction">
+          <!-- se ejectuta por defecto =SUCCESS la pagina jsp-->
+            <result name="success">crearUsuario.jsp</result>
+            <result name="input">crearUsuario.jsp</result>
+            <result name="error">crearUsuario.jsp</result>
+        </action>
+           <action name="IngresoProyectoXML" class="com.edu.apliweb.action.IngresoProyectoAction">
+          <!-- se ejectuta por defecto =SUCCESS la pagina jsp-->
+            <result name="success">crearProyecto.jsp</result>
+            <result name="input">crearProyecto.jsp</result>
+            <result name="error">crearProyecto.jsp</result>
+        </action>
+         <action name="IngresoActividadXML" class="com.edu.apliweb.action.IngresoActividadAction">
+          <!-- se ejectuta por defecto =SUCCESS la pagina jsp-->
+            <result name="success">crearActividad.jsp</result>
+            <result name="input">crearActividad.jsp</result>
+            <result name="error">crearActividad.jsp</result>
+        </action>
+        <action name="listaUsuarioXML" class="com.edu.apliweb.action.CrearUsuarioAction">
+            <result name="success" type="json">crearUsuario.jsp</result>
+        </action>
+            <action name="listaProyectoXML" class="com.edu.apliweb.action.CrearProyectoAction">
+            <result name="success" type="json">crearProyecto.jsp</result>
+           
+        </action>
+        
+            <action name="listaActividadXML" class="com.edu.apliweb.action.CrearActividadAction">
+            <result name="success" type="json">crearActividad.jsp</result>
+           
+        </action>
+        <action name="LogoutUsuarioXML" class="com.edu.apliweb.action.LogoutUsuarioAction">
+          <!-- se ejectuta por defecto =SUCCESS la pagina jsp-->
+            <result name="success">/login.jsp</result>
+        </action>
+         <action name= "BuscaUsuarioXML" class="com.edu.apliweb.action.BuscaUsuarioAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearUsuario.jsp</result>
+            <result name="error">crearUsuario.jsp</result>
+        </action>
+          <action name= "BuscaProyectoXML" class="com.edu.apliweb.action.BuscaProyectoAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearProyecto.jsp</result>
+            <result name="error">crearProyecto.jsp</result>
+        </action>
+        <action name= "BuscaActividadXML" class="com.edu.apliweb.action.BuscaActividadAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearActividad.jsp</result>
+            <result name="error">crearActividad.jsp</result>
+        </action>
+        <action name= "ActualizaUsuarioXML" class="com.edu.apliweb.action.ActualizaUsuarioAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearUsuario.jsp</result>
+            <result name="error">crearUsuario.jsp</result>
+        </action>
+        <action name= "ActualizaProyectoXML" class="com.edu.apliweb.action.ActualizaProyectoAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearProyecto.jsp</result>
+            <result name="error">crearProyecto.jsp</result>
+        </action>
+        <action name= "ActualizaActividadXML" class="com.edu.apliweb.action.ActualizaActividadAction">
+            <!-- se ejecuta por defecto = SUCCESS la pagina jsp-->
+            <result name="success">crearActividad.jsp</result>
+            <result name="error">crearActividad.jsp</result>
+        </action>
+    </package>
+</struts>
